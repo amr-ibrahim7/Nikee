@@ -9,11 +9,7 @@ import Footer from "@/components/ui/Footer";
 
 import { useEffect } from "react";
 
-interface ProductPageProps {
-  product: ProductTypeFil | undefined;
-}
-
-const ProductPage: React.FC<ProductPageProps> = () => {
+const ProductPage: React.FC<ProductTypeFil> = () => {
   const pathname = usePathname();
   const id: string = pathname.substring(1);
   const item = productsData.find(
