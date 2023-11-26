@@ -1,5 +1,5 @@
 "use client";
-import { ProductDataArr } from "@/Types/Products";
+import { ProductDataArr, ProductTypeFil } from "@/Types/Products";
 import type { FC } from "react";
 import shoe from "@/constants/data";
 import React from "react";
@@ -10,7 +10,7 @@ import { sortOptions } from "@/config/products";
 
 import SEO from "@/components/SEO";
 
-const ProductsPage: FC<ProductDataArr> = () => {
+const ProductsPage: React.FC = () => {
   const [grid, setGrid] = React.useState<boolean>(true);
   const {
     filtered,

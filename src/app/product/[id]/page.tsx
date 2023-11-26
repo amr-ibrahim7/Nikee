@@ -1,20 +1,19 @@
 "use client";
-import { ProductTypeFil } from "@/Types/Products";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import productsData from "@/constants/dataproduct";
 import ProductDetailsComponent from "@/components/ProductDetails";
-import { usePathname } from "next/navigation";
-
 import ProductCarousel from "@/components/ProductCarousel";
 import Footer from "@/components/ui/Footer";
+import { ProductTypeFil } from "@/Types/Products";
 
-import { useEffect } from "react";
-
-const ProductPage: React.FC<ProductTypeFil> = () => {
+const ProductPage: React.FC = () => {
   const pathname = usePathname();
   const id: string = pathname.substring(1);
   const item = productsData.find(
     (item) => item.id === parseInt(pathname.split("/")[2])
   );
+
   useEffect(() => {
     // Update the page title and description dynamically
     document.title = `Nike ${item?.title}` || "Product Title";

@@ -1,12 +1,12 @@
-import { ProductDetailsTy } from "@/Types/Products";
+import { ProductTypeFil } from "@/Types/Products";
 import type { FC } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
-interface ProductPageProps {
-  product: ProductDetailsTy | undefined;
-}
-const ProductCarousel: FC<{ data: ProductDetailsTy }> = ({ data }) => {
+// interface ProductPageProps {
+//   product: ProductDetailsTy | undefined;
+// }
+const ProductCarousel: FC<{ data: ProductTypeFil }> = ({ data }) => {
   return (
     <div className="top-[50px] mx-auto w-full max-w-[600px] text-[20px] text-white lg:px-10">
       <Carousel

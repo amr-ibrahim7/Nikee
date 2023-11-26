@@ -21,7 +21,9 @@ const CartContext = createContext<CartContextValue>({
   clearCart: () => {},
 });
 
-export const CartProvider: React.FC = ({ children }) => {
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [cart, setCart] = useState<Array<ProductTypeFil>>([]);
   const [cookies, setCookie] = useCookies(["cart"]);
 

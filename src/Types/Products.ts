@@ -11,6 +11,7 @@ export interface ProductType {
   quantity: number;
   category: string;
   image: string;
+  images: string[];
   alt: string;
   size: string;
   sizes: string[];
@@ -25,6 +26,7 @@ export interface ProductTypeFil {
   quantity: number;
   category: string;
   image: string;
+  images: string[];
   alt: string;
   size: string;
   userId: string;

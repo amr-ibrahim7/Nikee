@@ -59,7 +59,6 @@ const FilterData = ({ data }: ProductDataArr) => {
     query,
     categoryQuery,
     filtered,
-    query,
   };
 };
 
